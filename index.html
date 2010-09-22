@@ -1,0 +1,95 @@
+<!doctype html>
+<html manifest="maxapp.manifest">
+    <head>
+        <meta charset="UTF-8" />
+        <title>MaxApp</title>
+        <style type="text/css" media="screen">@import "jqtouch/jqtouch.min.css";</style>
+        <style type="text/css" media="screen">@import "themes/apple/theme.min.css";</style>
+        <script src="jqtouch/jquery.1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jqtouch/jqtouch.min.js" type="application/x-javascript" charset="utf-8"></script>
+        <script src="extensions/jqt.offline.js" type="application/x-javascript" charset="utf-8"></script>
+
+        <script type="text/javascript" charset="utf-8">
+            var jQT = new $.jQTouch({
+                icon: 'jqtouch.png',
+				startupScreen: 'jqt_startup.png',
+                addGlossToIcon: false,
+                fullScreen: true
+            });
+
+            $(function(){
+                console.log('Document.ready test');
+            });
+        </script>
+		
+    </head>
+    <body>
+    <div id="home">
+            <div class="toolbar">
+                <h1>MaxApp</h1>
+				<a href="#about" class="button leftButton flip">About</a>
+			</div>
+			<div class="info">
+				<p>Welcome to MaxApp</P>
+			</div>
+			<div class="list">
+				<ul id="pages">
+					<li class="arrow"><a class="swap" href="#pg1">Page 1</a></li>
+					<li class="arrow"><a class="swap" href="#pg2">Page 2</a></li>
+					<li class="arrow"><a class="swap" href="#form">Form</a></li>
+				</ul>
+			</div>
+	</div>
+	<div id="about">
+		<div class="toolbar">
+			<h1>About MaxApp</h1>
+			<a href="#home" class="button back">Back</a>
+		</div>
+		<div class="info">
+			<p>MaxApp was created by Max Tamer-Mahoney, and is his first iPhone App.</p>
+		</div>
+	</div>
+	<div id="pg1">
+		<div class="toolbar">
+			<h1>Page 1</h1>
+			<a href="#home" class="button back">Back</a>
+		</div>
+		<div class="info">
+			<p>This is Page 1</p>
+		</div>
+	</div>
+		<div id="pg2">
+		<div class="toolbar">
+			<h1>Page 2</h1>
+			<a href="#home" class="button back">Back</a>
+		</div>
+		<div class="info">
+			<p>This is Page 2</p>
+		</div>
+	</div>
+	<div id="form">
+		<div class="toolbar">
+			<h1>Form</h1>
+			<a href="#home" class="button blueButton slideup">Done</a>
+		</div>
+		<div class="form">
+			<form id="theform">
+				<ul class="rounded">
+					<li><input type="text" placeholder="Name?" /></li>
+					<li><input type="text" placeholder="Age?" /></li>
+					<li>Do you like pie? <span class="toggle"><input type="checkbox" /></span></li>
+					<li>
+						<select name="selector">
+							<option>Favorite Color?</option>
+							<option>Red</option>
+							<option>Blue</option>
+							<option>Yellow</option>
+							<option>Purple</option>
+							<option>Pink</option>
+							<option>Black</option>
+					</li>
+				</ul>
+			</form>
+		</div>
+    </body>
+</html>
